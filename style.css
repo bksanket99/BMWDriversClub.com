@@ -1,0 +1,689 @@
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,400;1,500&display=swap");
+
+:root {
+  --main: #fff;
+  --border: 0.2rem solid rgba(0, 0, 0, 0.5);
+  --box_shadow: 0 0.2rem 1rem rgba(0, 0, 0, 1.0);
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  background:darkblue;
+}
+html::-webkit-scrollbar-track {
+  background: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Besley", serif;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  transition: linear 0.2s;
+}
+*::selection {
+  background: #fff;
+  color: #000;
+}
+section {
+   padding: 2rem 10%;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+.btn {
+  padding: 0.8rem 3rem;
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.heading {
+  padding-bottom: 1rem;
+  font-size: 4.5rem;
+  text-align: center;
+}
+/* Header/Navbar Start */
+header {
+  z-index: 10000;
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 4%;
+  background-color:#7C86A6;
+  box-shadow: var(--box_shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navbar a {
+  font-size: 2.0rem;
+  color: #fff;
+  margin: 0 3rem;
+  text-shadow: 1px 1px 2px black;
+}
+header .navbar a:hover {
+  color: #F4EA56;
+}
+#LoginBtn .btn {
+  margin-top: 0;
+  background-color:#F4EA56;
+  color: black;
+}
+#LoginBtn i {
+  color: #fff;
+  font-size: 2.5rem;
+  display: none;
+}
+#MenuBtn {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+/* Header/Navbar End */
+
+/* Login Form Container */
+.loginFormContainer {
+  position: fixed;
+  top: -105%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1)50%;
+  z-index: 1000;
+}
+.loginFormContainer.active {
+  top: 0;
+}
+.loginFormContainer form {
+  margin: 2rem;
+  border: var(--border);
+  box-shadow: var(--box_shadow);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background:#7C86A6 ;
+  text-align: center;
+  width: 40rem;
+  border: none;
+}
+.loginFormContainer form h3 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  color: #fff;
+}
+.loginFormContainer form .box {
+  font-size: 1.6rem;
+  width: 100%;
+  margin: 0.7rem 0;
+  border: var(--border);
+  border-radius: 0.5rem;
+  text-transform: none;
+  padding: 1rem 1.2rem;
+}
+.loginFormContainer form p {
+  font-size: 1.5rem;
+  color: #000;
+  padding: 1rem 0;
+}
+.loginFormContainer form p a {
+  color:darkblue;
+  text-decoration: none;
+  transition: all 0.55s ease;
+  letter-spacing: 2px;
+}
+.loginFormContainer form p a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  height: 40px;
+  color: #fff;
+}
+#CloseLoginForm {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 5rem;
+  cursor: pointer;
+  z-index: 100000;
+}
+.loginFormContainer form .buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.loginFormContainer form .btn {
+  width: 100%;
+  display: block;
+  background-color:#FFF019;
+  margin: 0.5rem 0;
+  color: black;
+}
+.loginFormContainer form .btn:hover
+{
+  background-color: red;
+  color: #fff;
+}
+/* Login Form Container */
+
+/* Home Section Start */
+.home
+{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-image:url("image/bmw.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top:50px;
+  flex-wrap: wrap;
+
+}
+ .iconsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 3.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-top: -16%;
+}
+.iconsContainer .icons {
+  background: #7C86A6;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box_shadow);
+  border-radius: 1.5rem;
+  gap: 2.5rem;
+  padding: 2rem;
+  cursor: pointer;
+} 
+
+.iconsContainer .icons i {
+  background:#FFF019;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+}
+.iconsContainer .icons h3 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.iconsContainer .icons p {
+  color: #fff;
+  font-size: 1.9rem;
+  font-family: 'Alkatra', cursive;
+}
+.iconsContainer .icons:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* Home Section End */
+
+
+
+/* Vehicle Section Start */
+.vehicle 
+{
+  width: 100%;
+  background-image: url("image/bmwglass.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top: 24px;
+  height: 100%;
+  color:#FFF019;
+  text-shadow: 1px 2px 1px black;
+}
+.VehiclesSlider {
+  padding-bottom: 6rem;
+}
+.VehiclesSlider .swiper-wrapper
+{
+  margin-top:40px;
+}
+.VehiclesSlider .box {
+  text-align: center;
+}
+.vehicle img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  transform: scale(0.8);
+}
+.VehiclesSlider .box:hover img
+{
+  transform: scale(1.2);
+}
+.VehiclesSlider .swiper-slide-active img {
+  opacity: 2;
+  transform: scale(1.0);
+}
+.VehiclesSlider .box .content {
+  padding-top: 2rem;
+  transform: scale(0);
+}
+.VehiclesSlider .swiper-slide-active .content {
+  transform: scale(1);
+}
+.VehiclesSlider .box .content h3 {
+  font-size: 2.5rem;
+  background-color:#F4EA56;
+  color: #000;
+  text-shadow: none;
+  border-radius: 10px;
+  box-shadow: var(--box_shadow);
+
+}
+.VehiclesSlider .box .content .price {
+  color:lightgreen;
+  font-weight: 600;
+  padding: 1rem 0;
+  text-shadow: none;
+  font-size: 2.2rem;
+}
+.VehiclesSlider .box .content .price span {
+  color:#FFF019;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  text-shadow: none;
+  font-weight: 600;
+}
+
+.VehiclesSlider .box .content p {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  padding-top: 1rem;
+  text-shadow: none;
+  color: #fff;
+}
+.VehiclesSlider .box .content span {
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+/* Vehicle Section End */
+
+/* Featured Section Start */
+.feature {
+     width: 100%;
+     background-color: #7C86A6;
+     color:#FFF019;
+     text-shadow: 1px 2px 1px black;
+
+}
+.FeatureSlider {
+  padding: 1rem;
+  padding-bottom: 7rem;
+}
+.FeatureSlider .box {
+  padding: 2rem;
+  text-align: center;
+  border: var(--border);
+  border-radius: 1.5rem;
+  background-color:#8787A3;
+  box-shadow: var(--box_shadow);
+}
+.feature img {
+  height: 13rem;
+}
+.feature .box:hover img {
+  transform: scale(1.20);
+}
+.feature .box .content h3 {
+  font-size: 2.2rem;
+  text-shadow: none;
+  color:#F4EA56;
+}
+.feature .box .content .stars {
+  padding: 1rem 0;
+}
+.feature .box .content .stars i {
+  color:#FFF019;
+  font-size: 1.7rem;
+  text-shadow: none;
+}
+.feature .price {
+  font-size: 2.5rem;
+  color:#fff;
+  text-shadow: none;
+}
+.feature .btn 
+{
+  background-color: #FFF019;
+  border-radius: 5px;
+  color: #000;
+  text-shadow: none;
+}
+.feature .btn:hover
+{
+  background-color: red;
+  color: #fff;
+}
+/* Featured Section End */
+
+/* Services Section Start */
+.services
+{
+  width: 100%;
+  background-color:#8787A3;
+  color:#FFF019;
+  text-shadow: 1px 2px 1px black;
+
+}
+.services .boxContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.services .boxContainer .box {
+  box-shadow: var(--box_shadow);
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.services .boxContainer .box i {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  line-height: 6rem;
+  background-color:#fff;
+  color: #000;
+  font-size: 2.5rem;
+  text-shadow: none;
+  margin-bottom: 1rem;
+}
+.services .btn 
+{
+  background-color: #FFF019;
+  color: #000;
+}
+
+.services .btn:hover
+{
+  background-color:red;
+  color: #fff;
+}
+.services .boxContainer .box h3 {
+  font-size: 2.2rem;
+  color: #FFF019;
+  text-shadow: none;
+}
+.services .boxContainer .box p {
+  line-height: 1.8;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  text-shadow: none;
+  color: #fff;
+}
+/* Services Section End */
+/* light*/
+.light
+{
+  background-color: #7C86A6;
+}
+/* Newsletter Start */
+
+.newsletter {
+  
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.newsletter h3 {
+  color:#FFF019;
+  font-size: 3rem;
+  font-style: italic;
+  background-color: #8787A3 ;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 10px;
+  box-shadow: var(--box_shadow);
+  
+
+}
+
+.newsletter form {
+  height: 5rem;
+  max-width: 60rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: var(--box_shadow);
+  display: flex;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+.newsletter form input[type="email"] {
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  text-transform: none;
+}
+.newsletter form input[type="submit"] {
+  font-size: 1.7rem;
+  height: 100%;
+  width: 17rem;
+  cursor: pointer;
+  color:#FFF019 ;
+  text-shadow: none;
+  background-color:#8787A3;
+  text-shadow: 1px 1px 1px black;
+}
+/* Newsletter End */
+
+/* Review Section Start */
+.review
+{
+  width: 100%;
+  color:#FFF019;
+  background-image: url("image/bmwr.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-shadow: 1px 2px 1px black;
+}
+.ReviewSlider {
+  padding-bottom: 3rem;
+}
+.ReviewSlider .box {
+  padding: 2rem;
+  text-align: center;
+  opacity: 0.5;
+  margin: 2rem 0;
+  transform: scale(0.8);
+}
+.ReviewSlider .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  background-color: #8787A3;
+  box-shadow: var(--box_shadow);
+  border: var(--border);
+  border-radius: 0.5rem;
+}
+.ReviewSlider .box img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.ReviewSlider .box .content p {
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  color: #fff;
+  text-shadow: none;
+}
+.ReviewSlider .box .content h3 {
+  font-size: 2.2rem;
+  padding-bottom: 0.5rem;
+  color: #fff;
+}
+.ReviewSlider .box .content .stars i {
+  font-size: 1.7rem;
+  color:#FFF019;
+}
+/* Review Section End */
+
+/* Contact Form Start */
+.contact
+{
+  width:100%;
+  color:#FFF019;
+ 
+  text-shadow: 1px 2px 1px black;
+}
+.contact {
+  margin-bottom: 200px;
+}
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  gap: 1.5rem;
+}
+.contact iframe {
+  flex: 1 1 42rem;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: var(--box_shadow);
+  border: var(--border);
+  border-radius: 0.5rem;
+}
+.contact form {
+  flex: 1 1 42rem;
+  padding: 2rem;
+  box-shadow: var(--box_shadow);
+  border: var(--border);
+  text-align: center;
+  background-color: #8787A3;
+  border-radius: 0.5rem;
+}
+.contact form h3 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  color: lightgreen;
+  text-shadow: none;
+}
+.contact form .box {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem 1.2rem;
+  text-transform: none;
+  border: var(--border);
+  font-size: 1.6rem;
+  margin: 0.7rem 0;
+}
+.contact form textarea {
+  resize: none;
+  height: 18rem;
+}
+
+.contact form .btn 
+{
+  background-color:#FFF019;
+  color: #000;
+}
+
+.contact form .btn:hover
+{
+  background-color: red;
+  color: #fff;
+}
+/* Contact Form End */
+
+/* Footer Start */
+footer {
+  background: #7C86A6;
+  padding: 2rem;
+  text-align: center;
+}
+footer a {
+  color:#FFF019;
+  font-size: 2.4rem;
+  font-family: 'Alkatra', cursive;
+  text-shadow: 1px 2px 1px black;
+}
+footer a:hover {
+  color:#fff;
+}
+/* Footer End */
+
+
+/* Media Query */
+
+@media (max-width:1200px)
+{
+ 
+}
+/* Media Query */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  #MenuBtn {
+    display: initial;
+  }
+  .fa-times {
+    transform: rotate(360deg);
+  }
+  header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+    background:rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+  }
+  .home img {
+    margin-top: -10rem;
+  }
+}
+
+@media (max-width: 450px) {
+  
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+  
+}
